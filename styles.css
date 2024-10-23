@@ -1,0 +1,79 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+
+/* Brand logo */
+.brand {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.brand a {
+    text-decoration: none;
+    color: #333;
+}
+
+.brand a:hover {
+    color: #555;
+}
+
+/* Nav bar container */
+.nav-wrapper {
+    display: flex;
+    background-color: #333;
+    padding: 10px 0;
+    justify-content: center; /* Centers the nav links */
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Each nav item */
+.nav-link-wrapper {
+    margin: 0 20px;
+}
+
+.nav-link-wrapper a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 12px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for nav links */
+.nav-link-wrapper a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+/* Main content styling */
+main {
+    margin-top: 40px;
+}
+
+main h1 {
+    font-size: 32px;
+}
+
+main h3 {
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+main p {
+    font-size: 16px;
+    line-height: 1.6;
+}
