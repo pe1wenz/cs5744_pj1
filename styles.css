@@ -26,7 +26,7 @@ body {
 }
 
 .brand a:hover {
-    color: #555;
+    /*color: #555;*/
 }
 
 /* Nav bar container */
@@ -66,18 +66,32 @@ main {
     justify-content: center;
 }
 
-main h1 {
-    font-size: 32px;
+h3 {
+    font-size: 1.8em;
+    color: #4a90e2;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #4a90e2;
+    padding-bottom: 5px;
 }
 
-main h3 {
-    font-size: 24px;
-    margin-top: 20px;
+h4 {
+    font-size: 1.5em;
+    color: #333;
+    margin-top: 15px;
+    margin-bottom: 5px;
 }
 
-main p {
-    font-size: 16px;
-    line-height: 1.6;
+h5 {
+    font-size: 1.3em;
+    color: #666;
+    margin-top: 10px;
+}
+
+h6 {
+    font-size: 1.1em;
+    color: #777;
+    margin-top: 10px;
+    font-weight: bold;
 }
 
 /* Table Styling */
@@ -108,18 +122,46 @@ table tr:nth-child(even) {
     background-color: #f2f2f2;
 }
 
-table tr:hover {
-    background-color: #e0f7fa;
+ul,
+ol {
+    margin-left: 20px;
+    padding-left: 0;
 }
 
-/* Image Styling */
-.images img {
+ul li,
+ol li {
+    margin-bottom: 8px;
+}
+
+strong {
+    color: #4a90e2;
+}
+
+p {
+    font-size: 1em;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+ul {
+    list-style-type: disc;
+}
+
+ol {
+    list-style-type: decimal;
+}
+
+li {
+    line-height: 1.5;
+}
+
+img {
+    display: block;
     max-width: 100%;
     height: auto;
-    border-radius: 5px;
-    padding: 3rem;
-    margin: 3rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
 .container {
