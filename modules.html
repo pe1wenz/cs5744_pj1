@@ -12,7 +12,7 @@
 
 <body>
   <div class="brand">
-    <a href="index.html">Project 1 <br></a>
+    <a href="background.html">Project 1 - Online Streaming Platform <br></a>
   </div>
   <div class="nav-wrapper">
 
@@ -49,12 +49,96 @@
   <br>
 
   <main>
-    <div><h1>Online Streaming Platform</h1></div>
+    <div class="container">
     <h3>Modules</h3>
     <div>
-      <p>paragrah</p>
+      <h4>Module 1 - Video Streaming</h4>
+      <p>The Video Streaming and Management Module is responsible for handling the video processing, storage, and streaming operations. This includes both live and on-demand content delivery. It integrates with a CDN to ensure low-latency delivery and connects with the user preferences system for personalized streaming.</p>
+
+      <h5>Design Element DE-1: Video Management and Streaming</h5>
+      <h6>Key Components:</h6>
+      <ul>
+        <li><strong>Media Processing Service:</strong> Handles video encoding and processing for streaming.</li>
+        <li><strong>Streaming Service:</strong> Manages live and on-demand video playback.</li>
+        <li><strong>CDN (Content Delivery Network):</strong> Caches video content to ensure low-latency delivery across different geographic locations.</li>
+        <li><strong>Recommendation Engine:</strong> Provides video recommendations based on user activity.</li>
+      </ul>
+
+      <h6>Architecture:</h6>
+      <ul>
+        <li><strong>Backend:</strong> Processes video content and stores it for on-demand streaming or live broadcast. Uses AWS EC2 for processing power and CDN for delivery.</li>
+        <li><strong>Interaction with Other Modules:</strong> Integrated with the video management service, which handles video metadata and search functionalities.</li>
+      </ul>
+
+      <h6>Workflow:</h6>
+      <ol>
+        <li><strong>User Request:</strong> The user requests a video to be streamed.</li>
+        <li><strong>User Preferences:</strong> The system retrieves user preferences from the User Management Service.</li>
+        <li><strong>Video Processing:</strong> The Media Processing Service processes the video.</li>
+        <li><strong>Content Delivery:</strong> The CDN ensures optimal video delivery to the user.</li>
+        <li><strong>Recommendation:</strong> Based on the user's activity, relevant videos are recommended.</li>
+      </ol>
+      <img src="./resource/pic1.jpg" alt="">
+      <img src="./resource/pic2.jpg" alt="">
+      <img src="./resource/pic3.jpg" alt="">
     </div>
 
+    <div>
+      <h4>Module 2 - Social Media and User Management</h4>
+      <p>This module is designed to handle user activity and social interactions on the platform. It includes user profile management, real-time social features (comments, likes), and tracks user sessions and behavior.</p>
+
+      <h5>Design Element DE-2: User Activity and Interaction</h5>
+      <h6>Key Components:</h6>
+      <ul>
+        <li><strong>User Management Service:</strong> Manages user authentication, session tracking, and profiles.</li>
+        <li><strong>Social Features Service:</strong> Handles interactions like comments, likes, and follows, and supports real-time bullet comments in live streams.</li>
+        <li><strong>Monetization Service:</strong> Manages subscriptions, payments, and allows creators to monetize content.</li>
+      </ul>
+
+      <h6>Architecture:</h6>
+      <ul>
+        <li><strong>Frontend and Backend Integration:</strong> Social media interactions are captured on the frontend using React and processed by the backend services via API Gateway.</li>
+        <li><strong>Interaction with Other Modules:</strong> Social data is utilized by the recommendation engine to personalize content suggestions.</li>
+      </ul>
+
+      <h6>Workflow:</h6>
+      <ol>
+        <li><strong>User Authentication:</strong> The user logs in through the User Management Service.</li>
+        <li><strong>Session Management:</strong> Tracks user session information and interactions with the platform.</li>
+        <li><strong>Social Interaction:</strong> Users can comment, like, and follow others, tracked in real-time.</li>
+        <li><strong>Monetization:</strong> Subscriptions and payment handling for premium content.</li>
+      </ol>
+      <img src="./resource/pic4.jpg" alt="">
+      <img src="./resource/pic5.jpg" alt="">
+    </div>
+
+    <div>
+      <h4>Module 3 - Recommendation</h4>
+      <p>This module personalizes content based on user interactions and provides analytic insights. The recommendation engine uses data from user interactions, video metadata, and analytics.</p>
+
+      <h5>Design Element DE-3: Content Personalization and Analytics</h5>
+      <h6>Key Components:</h6>
+      <ul>
+        <li><strong>Recommendation Engine:</strong> Generates personalized video recommendations based on user activity and preferences.</li>
+        <li><strong>Analytics Service:</strong> Provides detailed insights into user behavior, engagement, and video performance.</li>
+      </ul>
+
+      <h6>Architecture:</h6>
+      <ul>
+        <li><strong>Backend Processing:</strong> The recommendation engine and analytics services process large volumes of data, using cloud-based infrastructure to ensure low-latency, real-time results.</li>
+        <li><strong>Interaction with Other Modules:</strong> The recommendation engine pulls data from the user management service and video management service to generate recommendations. The analytics service works with monetization services to track revenue-related data.</li>
+      </ul>
+
+      <h6>Workflow:</h6>
+      <ol>
+        <li><strong>User Data Collection:</strong> The system collects user interaction data such as video views, likes, and comments.</li>
+        <li><strong>Recommendation Generation:</strong> The Recommendation Engine uses collaborative filtering to provide personalized video suggestions.</li>
+        <li><strong>Analytics Tracking:</strong> The Analytics Service tracks user engagement, video performance, and provides insights to content creators.</li>
+      </ol>
+      <img src="./resource/pic6.jpg" alt="">
+      <img src="./resource/pic7.jpg" alt="">
+    </div>
+    </div>
   </main>
 
 

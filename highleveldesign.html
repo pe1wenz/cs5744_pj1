@@ -12,7 +12,7 @@
 
 <body>
   <div class="brand">
-    <a href="index.html">Project 1 <br></a>
+    <a href="background.html">Project 1 - Online Streaming Platform <br></a>
   </div>
   <div class="nav-wrapper">
 
@@ -49,12 +49,64 @@
   <br>
 
   <main>
-    <div><h1>Online Streaming Platform</h1></div>
+    <div class="container">
     <h3>High-Level Design</h3>
     <div>
-      <p>paragrah</p>
+      <h4>Module: Core Platform Infrastructure</h4>
+      <p>Combining the individual modules together renders a fully functioning software system for the Online Video Streaming Platform.</p>
+
+      <h5>Design Element DE-0: System Backbone and Core Services</h5>
+      <p>The basic workflow of the system infrastructure is as follows:</p>
+
+      <table>
+        <thead>
+        <tr>
+          <th>System Component</th>
+          <th>Function/Role</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td><strong>Authentication Service</strong></td>
+          <td>Performs user authentication during sign-in, using Single Sign-On and secure access control.</td>
+        </tr>
+        <tr>
+          <td><strong>API Gateway</strong></td>
+          <td>Handles user requests and routes them to the appropriate backend services for processing.</td>
+        </tr>
+        <tr>
+          <td><strong>Backend Services</strong></td>
+          <td>Developed using Spring Boot/Java, they process requests and interact with services like video streaming, media processing, and user management.</td>
+        </tr>
+        <tr>
+          <td><strong>Load Balancing</strong></td>
+          <td>Distributes incoming traffic efficiently across multiple AWS EC2 instances, ensuring seamless performance.</td>
+        </tr>
+        <tr>
+          <td><strong>Auto Scaling</strong></td>
+          <td>Automatically adjusts resources (such as adding/removing EC2 instances) based on system load to handle varying traffic volumes.</td>
+        </tr>
+        <tr>
+          <td><strong>Monitoring (AWS)</strong></td>
+          <td>Monitors the system performance, raises alerts, and provides insights into system health using AWS monitoring tools (e.g., CloudWatch).</td>
+        </tr>
+        <tr>
+          <td><strong>Data Management</strong></td>
+          <td>Handled by AWS RDS with MySQL, ensuring secure and reliable storage of user, video, and interaction data.</td>
+        </tr>
+        <tr>
+          <td><strong>CI/CD Pipelines</strong></td>
+          <td>Facilitates continuous integration and deployment of updates using AWS CodeCommit, CodePipeline, CodeBuild, and CodeDeploy.</td>
+        </tr>
+        </tbody>
+      </table>
+
+      <img src="./resource/hld1.jpg" alt="">
+      <img src="./resource/hld2.jpg" alt="">
+      <img src="./resource/hld3.jpg" alt="">
     </div>
 
+    </div>
   </main>
 
 
