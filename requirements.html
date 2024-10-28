@@ -11,47 +11,159 @@
 </head>
 
 <body>
-  <div class="brand">
-    <a href="background.html">Project 1 - Online Streaming Platform <br></a>
+<div class="brand">
+  <a href="highleveldesign.html">Project 1 - Online Streaming Platform <br></a>
+</div>
+<div class="nav-wrapper">
+
+  <div class="nav-link-wrapper">
+    <a href="requirements.html">Requirements</a>
   </div>
-  <div class="nav-wrapper">
 
-    <div class="nav-link-wrapper">
-      <a href="background.html">Background</a>
-    </div>
-
-    <div class="nav-link-wrapper">
-      <a href="usecases.html">Use Cases</a>
-    </div>
-
-    <div class="nav-link-wrapper">
-      <a href="requirements.html">Requirements</a>
-    </div>
-
-    <div class="nav-link-wrapper">
-      <a href="highleveldesign.html">High-Level Design</a>
-    </div>
-
-    <div class="nav-link-wrapper">
-      <a href="modules.html">Modules</a>
-    </div>
-
-    <div class="nav-link-wrapper">
-      <a href="designrationale.html">Design Rationale</a>
-    </div>
-
-    <div class="nav-link-wrapper">
-      <a href="conclusion.html">Conclusion</a>
-    </div>
-
+  <div class="nav-link-wrapper">
+    <a href="highleveldesign.html">High-Level Design</a>
   </div>
+
+  <div class="nav-link-wrapper">
+    <a href="modules.html">Modules</a>
+  </div>
+
+  <div class="nav-link-wrapper">
+    <a href="designrationale.html">Design Rationale</a>
+  </div>
+
+</div>
 
   <br>
 
   <main>
     <div class="container">
       <h3>Requirements</h3>
+
+      <h4>Mapping Design Decisions to Functional and Non-Functional Requirements</h4>
+      <p>This section elucidates the direct correlation between the architectural and technological choices made in the design of our video streaming platform and the functional and non-functional requirements that drive its development. This mapping ensures that the platform's architecture effectively addresses the core functionalities and quality attributes essential for its success.</p>
       <div>
+        <h5>Functional Requirements Alignment</h5>
+        <h6>Video Streaming (FR-1):</h6>
+        <ul>
+          <li>The platform's support for real-time live streaming is facilitated by the selection of a real-time streaming protocol, such as WebRTC, and potentially the integration of a message queue like Kafka. On-demand playback is enabled by the Video Management Service, the Content Delivery Network (CDN), and streaming protocols like HLS and DASH. Low-latency delivery is achieved through CDN utilization, optimized video encoding via the Media Processing Service, and the efficiency of the chosen streaming protocols.
+          </li>
+        </ul>
+
+        <h6>Social Media Integration (FR-2):</h6>
+        <ul>
+          <li>
+            Video sharing capabilities are provided through backend APIs and frontend implementations that facilitate seamless integration with external social media platforms. The User Management Service handles the logic for user following and activity updates. User preferences and interactions, such as video saving and liking, are stored and managed within the backend database.
+          </li>
+        </ul>
+
+        <h6>Content Recommendation (FR-3):</h6>
+        <ul>
+          <li>
+            Personalized video suggestions are powered by the Recommendation Engine, which may leverage machine learning models to analyze user data and provide tailored recommendations. The integration of machine learning algorithms within the Recommendation Engine enhances the accuracy and relevance of content delivery.
+          </li>
+        </ul>
+
+        <h6>Interactive Comments (FR-4):</h6>
+        <ul>
+          <li>
+            Real-time bullet comments are implemented using WebSockets or Server-Sent Events (SSEs) to provide an interactive viewing experience. Timestamped comments are supported by storing comment data with timestamps in the backend, allowing for contextual retrieval and display.
+          </li>
+        </ul>
+
+        <h6>Video Playback and Controls (FR-5):</h6>
+        <ul>
+          <li>
+            Standard video playback controls, including play, pause, seek, volume adjustment, and full-screen mode, are implemented within the frontend using React.js.
+          </li>
+        </ul>
+
+        <h6>Subtitle Translation (FR-6):</h6>
+        <ul>
+          <li>
+            Automatic subtitle translation is facilitated by integrating with a cloud-based translation service, such as the Google Cloud Translation API, within the Media Processing Service.
+          </li>
+        </ul>
+
+        <h6>User Activity and Interaction (FR-7):</h6>
+        <ul>
+          <li>
+            The backend tracks user activity and provides this data to the frontend for display, potentially using WebSockets for real-time updates, enhancing the sense of community and engagement.
+          </li>
+        </ul>
+
+        <h6>Payment and Subscription (FR-8):</h6>
+        <ul>
+          <li>
+            The Monetization Service manages subscription tiers and payment processing, potentially integrating with payment gateways like Stripe or PayPal to provide secure and convenient payment options.
+          </li>
+        </ul>
+
+        <h6>Moderation and Compliance (FR-9):</h6>
+        <ul>
+          <li>
+            Moderation tools and policies are implemented to ensure platform integrity and user safety. This may involve human moderators or automated systems utilizing machine learning for content analysis.
+          </li>
+        </ul>
+
+        <h6>Shorts (FR-10):</h6>
+        <ul>
+          <li>
+            The Video Management and Media Processing services handle the specific requirements for processing and delivering short-form video content.
+          </li>
+        </ul>
+
+        <h6>Affiliate Links for Content Creators (FR-11):</h6>
+        <ul>
+          <li>
+            The backend stores and manages affiliate link data, while the frontend ensures the appropriate display and functionality of these links within creator content.
+          </li>
+        </ul>
+
+        <div style="width: 100%; height: 2px; background-color: #4a90e2; margin: 20px 0;"></div>
+
+        <h5>Non-Functional Requirements Alignment</h5>
+        <h6>Scalability (NFR-1):</h6>
+        <ul>
+          <li>
+            The microservices architecture, CDN utilization, and cloud infrastructure (AWS) contribute to the platform's ability to accommodate a growing user base and content volume without compromising performance. Scalable databases like Amazon RDS and Redis further enhance this capability.
+          </li>
+        </ul>
+
+        <h6>Performance (NFR-2):</h6>
+        <ul>
+          <li>
+            React's efficient rendering, CDN usage, optimized video encoding, and database caching with Redis contribute to rapid load times and responsive interactions, ensuring a positive user experience.
+          </li>
+        </ul>
+
+        <h6>Security (NFR-3):</h6>
+        <ul>
+          <li>
+            The comprehensive Auth Service, secure coding practices, and data protection measures address security concerns by safeguarding user data, preventing unauthorized access, and mitigating cyber threats.
+          </li>
+        </ul>
+
+        <h6>Usability (NFR-4):</h6>
+        <ul>
+          <li>
+            The choice of React.js for frontend development, coupled with a focus on UI/UX design principles, ensures an intuitive and user-friendly interface that is accessible to users with diverse technical backgrounds.
+          </li>
+        </ul>
+
+        <h6>Reliability (NFR-5):</h6>
+        <ul>
+          <li>
+            Leveraging cloud infrastructure (AWS) with its high-availability services, along with robust monitoring and system redundancy, contributes to maintaining high availability and minimizing downtime.
+          </li>
+        </ul>
+
+
+
+      </div>
+      <div>
+        <div style="width: 100%; height: 2px; background-color: #4a90e2; margin: 20px 0;"></div>
+
         <h4>Supporting Services: Enabling Essential Functionalities</h4>
 
         <h6>Auth Service:</h6>
