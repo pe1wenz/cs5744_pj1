@@ -67,9 +67,9 @@
         <li><strong>Recommendation:</strong> Based on the user's activity, relevant videos are recommended.</li>
       </ol>
       <div class="img-container">
-      <img src="./resource/pic1.jpg" alt="">
-      <img src="./resource/pic2.jpg" alt="">
-      <img src="./resource/pic3.jpg" alt="">
+      <img src="./resource/Figure%204_%20Module%201-%20Video%20Streaming.png" alt="">
+      <img src="./resource/Figure%205_%20sequence_diagram_video_streaming.png" alt="">
+      <img src="./resource/Figure%206_A%20State%20Diagram%20representing%20Video%20Playback.png" alt="">
       </div>
     </div>
 
@@ -100,8 +100,8 @@
       </ol>
       <div class="img-container">
 
-      <img src="./resource/pic4.jpg" alt="">
-      <img src="./resource/pic5.jpg" alt="">
+      <img src="./resource/Figure%207_Social%20Media%20and%20User%20Management%20Module.png" alt="">
+      <img src="./resource/Figure%208_%20sequence%20diagram%20for%20Module%202-%20Social%20Media%20and%20User%20Management%20Module.png" alt="">
       </div>
     </div>
 
@@ -130,10 +130,246 @@
       </ol>
       <div class="img-container">
 
-      <img src="./resource/pic6.jpg" alt="">
-      <img src="./resource/pic7.jpg" alt="">
+      <img src="./resource/Figure%209_%20Recommendation%20Module.png" alt="">
+      <img src="./resource/Figure%2010_%20the%20sequence%20diagram%20for%20Module%203-%20Recommendation%20and%20Analytics%20Module.png" alt="">
       </div>
     </div>
+      <div>
+      <h4>Traceability Matrix</h4>
+      <table>
+        <thead>
+        <tr>
+          <th>Functional Requirements</th>
+          <th>Category</th>
+          <th>Requirement ID</th>
+          <th>Design ID</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td><strong>Video Streaming</strong></td>
+          <td>Core Functionality</td>
+          <td>FR-1</td>
+          <td>DE-1</td>
+        </tr>
+        <tr>
+          <td><strong>Social Media Integration</strong></td>
+          <td>User Interaction</td>
+          <td>FR-2</td>
+          <td>DE-2</td>
+        </tr>
+        <tr>
+          <td><strong>Content Recommendation</strong></td>
+          <td>Personalization</td>
+          <td>FR-3</td>
+          <td>DE-3</td>
+        </tr>
+        <tr>
+          <td><strong>Interactive Comments</strong></td>
+          <td>User Interaction</td>
+          <td>FR-4</td>
+          <td>DE-2</td>
+        </tr>
+        <tr>
+          <td><strong>Video Playback and Controls</strong></td>
+          <td>Core Functionality</td>
+          <td>FR-5</td>
+          <td>DE-1</td>
+        </tr>
+        <tr>
+          <td><strong>Subtitle Translation</strong></td>
+          <td>Accessibility</td>
+          <td>FR-6</td>
+          <td>DE-1</td>
+        </tr>
+        <tr>
+          <td><strong>User Activity and Interaction</strong></td>
+          <td>User Engagement</td>
+          <td>FR-7</td>
+          <td>DE-2</td>
+        </tr>
+        <tr>
+          <td><strong>Payment and Subscription</strong></td>
+          <td>Monetization</td>
+          <td>FR-8</td>
+          <td>DE-2</td>
+        </tr>
+        <tr>
+          <td><strong>Moderation and Compliance</strong></td>
+          <td>Content Management</td>
+          <td>FR-9</td>
+          <td>DE-2</td>
+        </tr>
+        <tr>
+          <td><strong>Shorts</strong></td>
+          <td>Content Creation</td>
+          <td>FR-10</td>
+          <td>DE-1</td>
+        </tr>
+        <tr>
+          <td><strong>Affiliate Links for Content Creators</strong></td>
+          <td>Monetization</td>
+          <td>FR-11</td>
+          <td>DE-2</td>
+        </tr>
+        </tbody>
+      </table>
+
+      <table>
+        <thead>
+        <tr>
+          <th>Non-Functional Requirements</th>
+          <th>Category</th>
+          <th>Requirement ID</th>
+          <th>Design ID</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td><strong>Scalability</strong></td>
+          <td>Performance</td>
+          <td>NFR-1</td>
+          <td>DE-1, DE-2, DE-3</td>
+        </tr>
+        <tr>
+          <td><strong>Performance</strong></td>
+          <td>Performance</td>
+          <td>NFR-2</td>
+          <td>DE-3</td>
+        </tr>
+        <tr>
+          <td><strong>Security</strong></td>
+          <td>Data Protection</td>
+          <td>NFR-3</td>
+          <td>DE-2, DE-3</td>
+        </tr>
+        <tr>
+          <td><strong>Usability</strong></td>
+          <td>User Experience</td>
+          <td>NFR-4</td>
+          <td>DE-1, DE-2</td>
+        </tr>
+        <tr>
+          <td><strong>Reliability</strong></td>
+          <td>System Availability</td>
+          <td>NFR-5</td>
+          <td>DE-1</td>
+        </tr>
+        </tbody>
+      </table>
+      </div>
+      <div style="width: 100%; height: 2px; background-color: #4a90e2; margin: 20px 0;"></div>
+
+      <div>
+        <h4>Architecture Details</h4>
+
+        <h5>Front-End and Authentication</h5>
+        <h6>Front-End Framework (React):</h6>
+        <p>The front end, developed with React, offers a seamless user experience across devices. React’s component-based architecture allows modular design, where individual features like video playback controls, bullet comments, and social interactions (e.g., likes and follows) are implemented as reusable components. React’s single-page application (SPA) capabilities reduce load times and enable quick transitions between pages, enhancing user retention.
+        </p>
+        <h6>Authentication Service:</h6>
+        <ul>
+          <li><strong>Single Sign-On (SSO):</strong> AWS Cognito can be used for SSO, integrating with providers like Google, Facebook, and Amazon, simplifying access while providing centralized authentication management.</li>
+          <li><strong>Multi-Factor Authentication (MFA):</strong> AWS Cognito also supports MFA, particularly valuable for creators and administrators, enhancing account security by requiring additional verification steps.</li>
+          <li><strong>IAM and Security Groups: </strong>AWS Identity and Access Management (IAM) manages permissions, with specific roles for users, creators, and admins. Security Groups define inbound and outbound rules at the network level, restricting unauthorized access to critical services like the API Gateway and backend servers. For example, only traffic from specified IP addresses is allowed access to the administrative dashboard.
+          </li>
+        </ul>
+
+        <h5>API Gateway and Backend Services</h5>
+        <h6>API Gateway:</h6>
+        <p>AWS API Gateway is utilized as a central access point, routing requests between the front end and backend microservices. This improves security by acting as a shield for backend services and supports monitoring and throttling to manage traffic. For instance, rate limiting can prevent abuse by limiting the number of API requests from a single user in a given timeframe.
+        </p>
+        <h6>Backend Services (Spring Boot/Java):</h6>
+        <ol>
+          <li><strong>User Management Service: </strong>This service manages user data and preferences, which are stored in Amazon RDS. For instance, when a user likes a video, the service records this interaction in their profile, which is later accessed by the Recommendation Engine for personalized suggestions.
+          </li>
+          <li><strong>Video Management Service: </strong>This service oversees video uploads, processing, and categorization. It interacts with AWS S3, where video files are stored, and with Media Processing Service for transcoding.
+          </li>
+          <li><strong>Streaming Service: </strong>Manages live and on-demand playback, leveraging AWS Elemental Media Services for encoding and streaming, which are cached through the CDN to ensure low-latency playback.
+          </li>
+          <li><strong>Search Service: </strong>Built with Elasticsearch, this service indexes video metadata for fast retrieval. When a user searches for a video, Elasticsearch quickly scans indexed data to provide relevant results.
+          </li>
+        </ol>
+
+        <h5>Load Balancing, Scaling, and Monitoring</h5>
+        <h6>Load Balancing:</h6>
+        <p>AWS Elastic Load Balancer (ELB) distributes incoming requests across multiple EC2 instances, preventing any one instance from being overloaded. For example, during peak traffic from a popular live event, the ELB routes requests to the least busy instance, ensuring the backend remains responsive.
+        </p>
+        <h6>Auto Scaling Group (AWS EC2):</h6>
+        <p>The Auto Scaling Group dynamically adjusts the number of active EC2 instances based on traffic patterns. For instance, during a major event, Auto Scaling detects increased CPU and network utilization, automatically provisioning additional instances to meet demand. When traffic reduces, these instances are decommissioned, optimizing cost-efficiency.
+        </p>
+        <h6>Monitoring and Alerts (AWS CloudWatch):</h6>
+        <p>AWS CloudWatch tracks key performance metrics, such as CPU load, memory usage, and API request latency. Alerts are configured for anomalies, such as unusually high request latency, prompting administrators to investigate. CloudWatch logs are also used to track errors or security incidents, with alerts sent via SNS (Simple Notification Service) to the operations team for prompt response.
+        </p>
+
+        <h5>Database and Storage</h5>
+        <h6>Amazon RDS and MySQL:</h6>
+        <p>Amazon RDS with MySQL stores structured data like user profiles, video metadata, and analytics. For instance, every time a user interacts with content (e.g., likes a video, comments), the User Management Service records this data in RDS, enabling quick retrieval for future interactions.
+        </p>
+        <h6>Content Delivery Network (CDN):</h6>
+        <p>
+          Amazon CloudFront acts as the CDN, caching video content at edge locations worldwide to minimize latency. For example, popular videos are stored closer to end-users, reducing load on the primary server and improving playback speed. CloudFront’s geo-restriction feature can limit access to certain regions, useful for content licensing compliance.
+        </p>
+
+        <h5>Recommendation and Content Delivery Network (CDN)</h5>
+        <h6>Recommendation Engine:</h6>
+        <ol>
+          <li><strong>Collaborative Filtering: </strong>By analyzing user activity (e.g., viewing history, follows), the engine identifies patterns among users with similar preferences, suggesting content popular within those groups.
+          </li>
+          <li><strong>Content-Based Filtering: </strong>Processes video metadata, including tags and descriptions, to recommend content with similar characteristics to previously watched videos.
+          </li>
+        </ol>
+        <h6>Analytic Service:</h6>
+        <p>AWS Redshift powers the analytics service, aggregating data from user interactions, viewership trends, and engagement metrics. This data feeds into the Recommendation Engine, refining content suggestions. Redshift's high-performance queries allow creators to view engagement trends, such as the most-watched videos and peak viewing times.
+        </p>
+        <h6>Monetization Service: </h6>
+        <p>This service integrates with AWS Payment Gateway, allowing creators to monetize their content through subscriptions and affiliate links. By tracking click-through rates and conversions, the service enables creators to optimize their revenue strategy.
+        </p>
+
+        <h5>CI/CD Pipeline</h5>
+        <h6>Continuous Integration/Continuous Deployment (CI/CD):</h6>
+        <ol>
+          <li><strong>Code Commit and Code Pipeline: </strong>AWS CodeCommit handles version control, while CodePipeline automates the build-test-deploy workflow. Each time code is committed, CodePipeline triggers a new build and deployment process.
+          </li>
+          <li><strong>Code Build and Code Deploy: </strong>CodeBuild compiles code and runs tests, ensuring new features are reliable. CodeDeploy handles the rollout to EC2 instances, using a blue-green deployment strategy to minimize downtime by routing traffic to new instances only after successful deployment.
+          </li>
+        </ol>
+        <h6>Code Quality Assurance:</h6>
+        <p>AWS CodeBuild integrates automated testing tools that validate new code, preventing bugs from reaching production. Code reviews and automated tests within the CI/CD pipeline catch issues early, enhancing system stability.
+        </p>
+
+        <h5>Security and Compliance</h5>
+        <h6>Data Encryption:</h6>
+        <p>AWS KMS (Key Management Service) encrypts sensitive data at rest and in transit. For example, all user profile data in Amazon RDS is encrypted, and network traffic is secured with TLS encryption.
+        </p>
+        <h6>Compliance with GDPR and COPPA:</h6>
+        <p>The platform provides data privacy features aligned with GDPR and COPPA regulations. AWS Config monitors for compliance, ensuring data practices adhere to regional requirements. Users have options to control their data, including data export and account deletion, supporting transparency and trust.
+        </p>
+        <h6>AI-Powered Content Moderation:</h6>
+        <p>Amazon Rekognition is used to automatically flag inappropriate content in uploaded videos, enhancing platform safety. AWS Comprehend helps in moderating user comments by detecting toxic language, ensuring a positive community experience.
+        </p>
+
+        <h5>Data Flow and User Interaction</h5>
+        <h6>User Interaction Flow:</h6>
+        <p>Users interact with content through the API Gateway, which routes requests to backend services. For instance, when a user watches a video, the Streaming Service fetches the video from S3 and streams it via the CDN. Concurrently, user engagement (likes, comments) is recorded in RDS, informing the Recommendation Engine.
+        </p>
+        <h6>Recommendation Data Flow:</h6>
+        <p>User activity flows into the Recommendation Engine, which updates its models to personalize content suggestions. For example, if a user frequently watches cooking videos, the engine prioritizes similar content in their feed. AWS Lambda can be used for real-time data processing, updating recommendations without latency.
+        </p>
+        <h6>Affiliate and Monetization Integration:</h6>
+        <p>Creators can link affiliate products within video descriptions, tracked by the Monetization Service. Amazon Redshift stores and analyzes click-through rates, showing creators which affiliate products are most effective, allowing data-driven optimization.
+        </p>
+
+        <h5>Scalability and Future Improvements</h5>
+        <h6>Scalability with Serverless Options:</h6>
+        <p>Future expansions could incorporate AWS Lambda functions for tasks like video transcoding or recommendation updates, which do not require dedicated servers. Serverless functions can scale automatically, further optimizing costs during peak usage.</p>
+        <h6>Advanced Machine Learning for Recommendations:</h6>
+        <p>As the platform grows, more advanced models, potentially using AWS Sagemaker, can analyze viewer patterns for deeper personalization. For instance, neural networks could be trained on viewer sequences to suggest content that aligns closely with user preferences.</p>
+        <h6>Enhanced User Personalization:</h6>
+        <p>AWS Personalize could be integrated to dynamically adjust content visibility based on user engagement metrics, showing more localized or interest-specific videos to enhance user experience.
+        </p>
+      </div>
+
     </div>
   </main>
 
